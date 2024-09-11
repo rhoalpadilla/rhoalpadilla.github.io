@@ -1,0 +1,198 @@
+@font-face {
+    font-family: "F1";
+    src: url(Anton-Regular.ttf);
+}
+@font-face {
+    font-family: "F2";
+    src: url(Poppins-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: F2, 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #131d24, #1a2a33);
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+header {
+    background: #131d24;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+header p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #18df64;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #18df64;
+    color: #131d24;
+    border-radius: 5px;
+}
+
+h1 {
+    color: #18df64;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-family: F1;
+    font-size: 4rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+h1:hover {
+    color: #ffffff;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.4);
+}
+
+.about-section, .hobbies-section, .gallery-section {
+    padding: 2rem;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.image-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.profile-img, .gallery-img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-img:hover, .gallery-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    background-color: #19252e;
+    color: #e0e0e0;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+/* Hobbies Section */
+.hobbies-section {
+    background: #1f2b36;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    max-width: 900px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hobbies-section h1 {
+    color: #18df64;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.hobbies-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.hobbies-section li {
+    background: #2b3a47;
+    border-radius: 8px;
+    margin: 1rem 0;
+    padding: 1rem;
+    color: #e0e0e0;
+    font-size: 1.1rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.hobbies-section li p {
+    margin-top: 0.5rem;
+    line-height: 1.4;
+}
+
+.hobbies-section li:hover {
+    background: #18df64;
+    color: #131d24;
+    transform: scale(1.02);
+}
+
+.hobbies-section li p {
+    margin: 0;
+}
+
+/* Gallery Section */
+.gallery-section {
+    background: #1f2b36;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    max-width: 900px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-section h1 {
+    color: #18df64;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.gallery-img {
+    width: calc(50% - 1rem); /* Adjusts width to account for gaps */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
