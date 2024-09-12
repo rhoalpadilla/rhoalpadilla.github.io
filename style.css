@@ -6,6 +6,10 @@
     font-family: "F2";
     src: url(Poppins-Regular.ttf);
 }
+@font-face {
+    font-family: "F3";
+    src: url(LemonJellyPersonalUse-dEqR.ttf);
+}
 
 * {
     margin: 0;
@@ -18,11 +22,13 @@ body {
     background: linear-gradient(135deg, #131d24, #1a2a33);
     color: #e0e0e0;
     line-height: 1.6;
+    position: relative;
+    min-height: 100vh;
 }
 
 header {
     background: #131d24;
-    padding: 1rem 2rem;
+    padding: 16px 32px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,23 +36,24 @@ header {
 }
 
 header p {
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 32px;
+    font-weight: 100;
     color: #18df64;
+    font-family: F3;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: flex-end;
-    gap: 2rem;
+    gap: 32px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.2rem;
-    padding: 0.5rem 1rem;
+    font-size: 19px;
+    padding: 8px 16px;
     transition: color 0.3s ease, background-color 0.3s ease;
 }
 
@@ -59,9 +66,9 @@ nav ul li a:hover {
 h1 {
     color: #18df64;
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
     font-family: F1;
-    font-size: 4rem;
+    font-size: 64px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
@@ -71,62 +78,57 @@ h1:hover {
     text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.4);
 }
 
-.about-section, .hobbies-section, .gallery-section {
-    padding: 2rem;
-    text-align: center;
+.about-section {
+    padding: 32px;
+    text-align: left;
     max-width: 900px;
     margin: 0 auto;
+    border: 2px solid transparent;
+}
+
+.about-section p {
+    margin-bottom: 16px; 
 }
 
 .image-section {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
+    position: relative;
 }
 
-.profile-img, .gallery-img {
-    width: 300px;
+.profile-img {
+    width: 400px;
     height: auto;
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+    opacity: 0.5;
 }
 
-.profile-img:hover, .gallery-img:hover {
-    transform: scale(1.1);
+.profile-img:hover {
+    transform: scale(1.1) translateY(-50%);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    opacity: 0.8;
 }
 
-footer {
-    background-color: #19252e;
-    color: #e0e0e0;
-    text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
-}
-
-footer p {
-    font-size: 0.9rem;
-    letter-spacing: 0.5px;
-}
 
 .hobbies-section {
     background: #1f2b36;
     border-radius: 10px;
-    padding: 2rem;
+    padding: 32px;
     text-align: center;
     max-width: 900px;
-    margin: 2rem auto;
+    margin: 32px auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .hobbies-section h1 {
     color: #18df64;
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
+    font-size: 48px;
+    margin-bottom: 24px;
 }
 
 .hobbies-section ul {
@@ -137,15 +139,15 @@ footer p {
 .hobbies-section li {
     background: #2b3a47;
     border-radius: 8px;
-    margin: 1rem 0;
-    padding: 1rem;
+    margin: 16px 0;
+    padding: 16px;
     color: #e0e0e0;
-    font-size: 1.1rem;
+    font-size: 18px;
     transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .hobbies-section li p {
-    margin-top: 0.5rem;
+    margin-top: 8px;
     line-height: 1.4;
 }
 
@@ -155,35 +157,31 @@ footer p {
     transform: scale(1.02);
 }
 
-.hobbies-section li p {
-    margin: 0;
-}
-
 .gallery-section {
     background: #1f2b36;
     border-radius: 10px;
-    padding: 2rem;
+    padding: 32px;
     text-align: center;
     max-width: 900px;
-    margin: 2rem auto;
+    margin: 32px auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .gallery-section h1 {
     color: #18df64;
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
+    font-size: 48px;
+    margin-bottom: 24px;
 }
 
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 16px;
     justify-content: center;
 }
 
 .gallery-img {
-    width: calc(50% - 1rem); /* Adjusts width to account for gaps */
+    width: calc(50% - 16px);
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -193,4 +191,27 @@ footer p {
 .gallery-img:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    background-color: #19252e;
+    color: #e0e0e0;
+    text-align: center;
+    padding: 16px 0;
+    margin-top: 32px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    bottom: 0;
+}
+
+footer p {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    margin-bottom: 0;
+}
+
+footer {
+    margin-top: auto;
+    padding: 16px 0 48px;
+    position: relative;
 }
